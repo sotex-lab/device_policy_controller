@@ -45,7 +45,7 @@ class DevicePolicyControllerPlatformImpl
 
   @override
   Future<bool> installApplication(String? apkUrl) async {
-    return await _methodChannel.invokeMethod('installApplication', apkUrl);
+    return await _methodChannel.invokeMethod('installApplication', {'apkUrl': apkUrl});
   }
 
   @override
