@@ -455,6 +455,7 @@ class DevicePolicyControllerPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                     setDataAndType(uri, "application/vnd.android.package-archive")
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }
+                installIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
                 // Check if the app installer is available
                 val packageManager = context.packageManager
